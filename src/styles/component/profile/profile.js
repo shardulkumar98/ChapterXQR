@@ -1,18 +1,19 @@
 import styled from "styled-components";
 
-export const MainContainer = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-width: 100%;
-/* position: absolute; */
-background: red;
-`
 export const Container = styled.div`
-padding: 10px 5px;
-position: absolute;
-`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid #fff;
+  padding: 10px 5px;
+  position: absolute;
+  padding: 45px 60px;
+  border-radius: 8px;
+`;
 export const SubContainer = styled.div`
-display: flex;
-gap: 10px;
-`
+  display: flex;
+  gap: 10px;
+  > div a {
+    color: whitesmoke;
+  }
+`;

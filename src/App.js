@@ -1,45 +1,56 @@
-import { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import MyCode from './components/Qrcode.js'
+import { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import MyCode from "./components/Qrcode.js";
 // import Profile from './components/Profile';
-import { SubContainer, Container, MainContainer } from './styles/component/profile/profile';
+import {
+  SubContainer,
+  Container,
+  MainContainer,
+} from "./styles/component/profile/profile";
 
 function App() {
-  const [isVisible, setisVisible] = useState(false)
-  const onHandleClick = () => setisVisible(true)
+  const [isVisible, setisVisible] = useState(false);
+  const onHandleClick = () => setisVisible(true);
   return (
     <div className="App">
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <div className='profile-tab' onClick={onHandleClick}>Profile</div>
+        <div className="profile-tab" onClick={onHandleClick}>
+          Profile
+        </div>
         {/* <Profile/> */}
-        
-        {isVisible ? 
+
+        {isVisible ? (
           <Container>
             <SubContainer>
-              <div>Name:</div>
-              <div>Gajendra Mehra</div>
+              <span>Name:</span>
+              <span>Chase Guo </span>
             </SubContainer>
             <SubContainer>
               <div>Profile:</div>
-              <div>Software Engineer</div>
+              <div>ChapterX</div>
             </SubContainer>
             <SubContainer>
               <div>Designation:</div>
-              <div>Full Stack</div>
+              <div>Co-Founder</div>
             </SubContainer>
             <SubContainer>
               <div>Bot link:</div>
               <div>
-                <a href="http://t.me/chapterxbotdemobot">Join Here</a>
+                <a
+                  href="http://www.t.me/ChasegBot"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Join Here
+                </a>
               </div>
             </SubContainer>
-            </Container> 
-
-          : 
-            <MyCode />
-        }
+          </Container>
+        ) : (
+          <MyCode />
+        )}
       </header>
     </div>
   );
